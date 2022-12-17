@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+
+.hide {
+    display: none;
+}
+
+.carGame {
+    background: url(images/gamebg.jpg) no-repeat center;
+    background-size: 100% 100%;
+}
+
+.car {
+    background: url(images/mycar1png.png) no-repeat center ;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 130px;
+    position: absolute;
+    bottom: 25px;
+}
+
+.enemy {
+    background: url(images/mycar2red.png) no-repeat center ;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 130px;
+    position: absolute;
+}
+
+.gameArea {
+    max-width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    border-left: 7px dashed white;
+    border-right: 7px dashed white;
+}
+
+.startScreen {
+    position: absolute;
+    /* background-color: #ee5253; */
+    /* background-color: #21D4FD; */
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bold;
+    z-index: 1;
+    text-align: center;
+    border: 1px solid #ff6b6b;
+    padding: 15px;
+    width: 50%;
+    cursor: pointer;
+    letter-spacing: 5;
+    word-spacing: 3;
+    line-height: 30px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 5px #777;
+    border-radius:5px ;
+}
+
+.lines {
+    width: 10px;
+    height: 100px;
+    background: white;
+    position: absolute;
+    transform: translate(-50%, 0);
+    top: 0;
+    left: 50%;
+    /* left: 200px; */
+}
+
+
+
+.score {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    /* background: #10ac84; */
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    width: 25%;
+    height: 70px;
+    text-align: center;
+    color: rgb(255, 7, 7);
+    font-size: 25px;
+    box-shadow: 0 5px 5px rgb(254, 244, 255);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 28px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+.score.mob {
+    display: none;
+}
+
+@media screen and (max-width: 1020.9px) {
+    .score {
+        width: 150px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 767.9px) {
+    .score.desk {
+        display: none;
+    }
+
+    .score.mob {
+        display: block;
+    }
+
+    .score {
+        top: 2px;
+        left: 2px;
+        background: rgba(79, 66, 255, 0.289);
+        width: 100px;
+        height: 60px;
+    }
+
+}
