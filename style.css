@@ -114,28 +114,10 @@
         top: 10px;
     }
 }
-/* 
+
 @media screen and (max-width: 767.9px) {
-    .score.desk {
-        display: none;
+    .car,.enemy{
+        bottom: 70px;
+        height: 100px;
     }
-
-    .score.mob {
-        display: block;
-    }
-
-    .score {
-        top: 2px;
-        left: 2px;
-        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-        width: 100px;
-        height: 60px;
-    }
-
 }
-.parentGarea{
-    max-width: 400px;
-    height: 100vh;
-    margin: 0 auto;
-    position: relative;
-} */
