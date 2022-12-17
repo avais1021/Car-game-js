@@ -1,7 +1,7 @@
 
 
 const score = document.querySelector(".score");
-// const mobScore = document.querySelector(".mob");
+const mobScore = document.querySelector(".mob");
 const startScreen = document.querySelector(".startScreen");
 const gameArea = document.querySelector(".gameArea");
 
@@ -10,7 +10,7 @@ startScreen.addEventListener("click" , start)
 
 // let player = { speed: 9 };
 let player = { speed: 9 , score:0 };
-// let mpoints = {mscore:0};
+let mpoints = {mscore:0};
 
 // -----------------
 let keys = {  
@@ -54,6 +54,15 @@ function endGame(){
 
 }
 
+const mediaQuery = window.matchMedia('(max-width: 767.9px)')
+if (mediaQuery.matches) {
+    // alert(1234)
+    function endGame(){
+     player.start = false;
+     startScreen.classList.remove("hide");
+     startScreen.innerHTML = "Game Over <br> Your final score is " + mpoints.mscore + " Press here to restart the Game.  ";
+    }
+}
 
 // -----------
 
@@ -120,9 +129,9 @@ function gamePlay(){
         // console.log(player.score++);
         player.score++;
         score.innerHTML= "Score <br>" + player.score++;
-        // mpoints.mscore++;
-        // mobScore.innerHTML = "Score <br>" + mpoints.mscore++;
-        // console.log(mpoints.mscore++);
+        mpoints.mscore++;
+        mobScore.innerHTML = "Score <br>" + mpoints.mscore++;
+        console.log(mpoints.mscore++);
         
 
     }
@@ -139,7 +148,7 @@ function start(){
 
     player.start = true;
     player.score = 0;
-    // mpoints.mscore = 0;
+    mpoints.mscore = 0;
     // yourScore.score = 0;
     window.requestAnimationFrame(gamePlay);
 
@@ -183,11 +192,3 @@ function start(){
 // day 3 ka 9 minute chalega 
 
 // car on road top view 
-
-
-// media query how 
-
-// const mediaQuery = window.matchMedia('(max-width: 767.9px)')
-// if (mediaQuery.matches) {
-//     // alert(1234)
-// }

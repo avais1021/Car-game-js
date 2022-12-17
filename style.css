@@ -100,19 +100,21 @@
     line-height: 28px;
     letter-spacing: 1px;
     border-radius: 5px;
+    z-index: 1;
 }
 
-.score.mob {
+/* .score.mob {
     display: none;
-}
+} */
 
 @media screen and (max-width: 1020.9px) {
     .score {
-        width: 150px;
-        left: 20px;
+        width: 100px;
+        left: 10px;
+        top: 10px;
     }
 }
-
+/* 
 @media screen and (max-width: 767.9px) {
     .score.desk {
         display: none;
@@ -125,9 +127,15 @@
     .score {
         top: 2px;
         left: 2px;
-        background: rgba(79, 66, 255, 0.289);
+        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
         width: 100px;
         height: 60px;
     }
 
 }
+.parentGarea{
+    max-width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+} */
