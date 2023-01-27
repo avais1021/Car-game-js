@@ -12,7 +12,8 @@
 }
 
 .carGame {
-    background: url(images/gamebg.jpg) no-repeat center;
+    /* background: url(images/gamebg.jpg) no-repeat center; */
+    background: greenyellow;
     background-size: 100% 100%;
 }
 
@@ -103,9 +104,43 @@
     z-index: 1;
 }
 
-/* .score.mob {
-    display: none;
-} */
+/* ----------mobile arrows-------------  */
+
+.mobile_arrows{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.chevron{
+    position: relative;
+    height: 100%;
+}
+.mobile_arrows i{
+    font-size: 37px;
+    color: greenyellow;
+    position: absolute;
+}
+.mobile_arrows .chevron :nth-child(1){
+    top: -5px;
+    left: 30%;
+}
+.mobile_arrows .chevron :nth-child(2){
+    top: 30%;
+    right: -5px;
+}
+.mobile_arrows .chevron :nth-child(3){
+    top: 30%;
+    left: -5px;
+}
+.mobile_arrows .chevron :nth-child(4){
+    bottom: -5px;
+    left: 30%;
+}
+
+
+/* ---------- */
 
 @media screen and (max-width: 1020.9px) {
     .score {

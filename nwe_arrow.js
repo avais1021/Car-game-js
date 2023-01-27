@@ -5,18 +5,11 @@ const score = document.querySelector(".score");
 const startScreen = document.querySelector(".startScreen");
 const gameArea = document.querySelector(".gameArea");
 
-// arrow Buttons
-
-const c_up = document.getElementsByClassName("c_up")[0];
-const c_right = document.getElementsByClassName("c_right")[0];
-const c_left = document.getElementsByClassName("c_left")[0];
-const c_down = document.getElementsByClassName("c_down")[0];
-
 
 startScreen.addEventListener("click" , start)
 
 // let player = { speed: 9 };
-let player = { speed: 7 , score:0 };
+let player = { speed: 9 , score:0 };
 // let mpoints = {mscore:0};
 
 // -----------------
@@ -25,8 +18,6 @@ let keys = {
 }
 
 document.addEventListener("keydown", keyDown);
-
-
 document.addEventListener("keyup", keyUp);
  
 
@@ -122,23 +113,17 @@ function gamePlay(){
         if(keys.ArrowLeft && player.x > 0) {player.x -= player.speed}
         if(keys.ArrowRight && player.x < (road.width - 60) ) {player.x += player.speed}
 
-        // document.addEventListener("touchend")
-        c_up.addEventListener("touchstart", function(){
-
+        c_up.addEventListener("click", function(){
             if( player.y > 140) {player.y -= player.speed}
         });
-        c_up.addEventListener("touchend", function(){
-            return player;
+        c_right.addEventListener("click", function(){
+            // if(player.x < (road.width - 60) ) {player.x += player.speed}
+            alert(123)
         });
-
-        // c_right.addEventListener("touchstart", function(){
-        //     if(player.x < (road.width - 60) ) {player.x += player.speed}
-        //     // alert(123)
-        // });
-        // c_left.addEventListener("touchstart", function(){
+        // c_left.addEventListener("click", function(){
         //     if( player.x > 0) {player.x -= player.speed}
         // });
-        // c_down.addEventListener("touchstart", function(){
+        // c_down.addEventListener("click", function(){
         //     if( player.y < (road.height - 135)) {player.y += player.speed}
         // });
        
@@ -228,6 +213,10 @@ function start(){
 
 // ----------mobile_arrow-----
 
+const c_up = document.getElementsByClassName("c_up")[0];
+const c_right = document.getElementsByClassName("c_up")[0];
+const c_left = document.getElementsByClassName("c_up")[0];
+const c_down = document.getElementsByClassName("c_up")[0];
 
 // c_up.addEventListener("click", upup);
 

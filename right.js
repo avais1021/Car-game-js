@@ -9,7 +9,7 @@ const gameArea = document.querySelector(".gameArea");
 startScreen.addEventListener("click" , start)
 
 // let player = { speed: 9 };
-let player = { speed: 9 , score:0 };
+let player = { speed: 5 , score:0 };
 let mpoints = {mscore:0};
 
 // -----------------
@@ -94,7 +94,7 @@ function moveEnemyCar(car) {
 
         if(item.y >= 700){
             item.y = -250;
-            item.style.left = Math.floor(Math.random() * 340  ) + "px" ;
+            item.style.left = Math.floor(Math.random() * 289  ) + "px" ;
 
         }
 
@@ -180,7 +180,7 @@ function start(){
         // enemycar.y = (x*230);
         enemycar.y = ((x+1) * 350) * -1;  
         enemycar.style.top = enemycar.y + "px";
-        enemycar.style.left = Math.floor(Math.random() * 340  ) + "px" ;
+        enemycar.style.left = Math.floor(Math.random() * 289  ) + "px" ;
         // enemycar.style.left = Math.floor(Math.random() < (road.right) ) ;
         gameArea.appendChild(enemycar);
         // console.log(enemycar);
